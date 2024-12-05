@@ -1,0 +1,28 @@
+#include <stdio.h>
+void main()
+{
+    int n,i,j,temp=1,num;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+       for(j=i+1;j<n;j++)
+       {
+           if(a[i]==a[j])
+           {
+               temp++;
+               a[j]=-99999;
+           }
+       }
+       temp=1;
+       if(a[i]!=-99999)
+       {
+       printf("Frequency of %d=%d \n",a[i],temp);
+       
+       }
+    }
+}
